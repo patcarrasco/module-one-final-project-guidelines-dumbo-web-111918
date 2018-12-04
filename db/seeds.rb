@@ -1,6 +1,6 @@
 # require 'pry'
 # require 'restclient'
-require './lib/api_communicator.rb'
+# require './lib/api_communicator.rb'
 # require_relative 'config/environment'
 
 

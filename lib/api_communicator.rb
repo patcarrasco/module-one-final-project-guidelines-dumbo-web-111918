@@ -1,7 +1,3 @@
-require 'rest-client'
-require 'json'
-require 'pry'
-
 easy1 = "https://opentdb.com/api.php?amount=50&difficulty=easy&type=multiple"
 easy2 = "https://opentdb.com/api.php?amount=50&difficulty=easy&type=multiple"
 moderate1 = "https://opentdb.com/api.php?amount=50&difficulty=medium&type=multiple"
