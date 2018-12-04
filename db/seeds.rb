@@ -1,21 +1,32 @@
-require 'pry'
-require 'restclient'
+# require 'pry'
+# require 'restclient'
+require './lib/api_communicator.rb'
+# require_relative 'config/environment'
 
-# require './config/environment'
 
-def question_array_from_api
-  response_string = RestClient.get('https://opentdb.com/api.php?amount=50')
-  response_hash = JSON.parse(response_string)
-  return response_hash["results"]
-end
+# formatted_questions
 
-# QUESTION:
 
-def convert_key_to_symbol(hash)
-  hash.collect do |k, v|
-    k
-    binding.pry
-  end
-end
+easy1 = "https://opentdb.com/api.php?amount=50&difficulty=easy&type=multiple"
+easy2 = "https://opentdb.com/api.php?amount=50&difficulty=easy&type=multiple"
+moderate1 = "https://opentdb.com/api.php?amount=50&difficulty=medium&type=multiple"
+moderate2 = "https://opentdb.com/api.php?amount=50&difficulty=medium&type=multiple"
+hard = "https://opentdb.com/api.php?amount=50&difficulty=hard&type=multiple"
+hard2 = "https://opentdb.com/api.php?amount=50&difficulty=hard&type=multiple"
+
+questions = [easy1, easy2, moderate1, moderate2, hard, hard2]
+
+formatted_questions = convert_key_to_symbol(questions)
+
+puts "In SEEDS"
 
 binding.pry
+
+#
+# def create_many_questions(array)
+#   array.each do |v|
+#     Question.new(v)
+#   end
+# end
+#
+# create_many_questions(formatted_questions)

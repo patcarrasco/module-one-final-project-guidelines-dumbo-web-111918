@@ -6,11 +6,10 @@ class CreateQuestions < ActiveRecord::Migration[5.0]
       t.string :difficulty
       t.string :question
       t.string :correct_answer
-      t.string :incorrect_answer1
-      t.string :incorrect_answer2
-      t.string :incorrect_answer3
+      t.string :option1
+      t.string :option2
+      t.string :option3
       t.integer :game_id
-      t.integer :user_id
     end
   end
 end
